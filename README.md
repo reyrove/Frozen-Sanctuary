@@ -1,7 +1,7 @@
 # 🏠 Frozen Sanctuary · Sparrow Hawk
 
 <p align="center">
-  <img src="/images/The Circuit Spire.webp" alt="Frozen Sanctuary – Sparrow Hawk's Digital Nest" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.5);" />
+  <img src="/images/The-Circuit-Spire.webp" alt="Frozen Sanctuary – Sparrow Hawk's Digital Nest" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.5);" />
 </p>
 
 <p align="center">
