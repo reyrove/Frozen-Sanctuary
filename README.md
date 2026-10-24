@@ -1,7 +1,7 @@
 # 🏠 Frozen Sanctuary · Sparrow Hawk
 
 <p align="center">
-  <img src="/images/The-Circuit-Spire.webp" alt="Frozen Sanctuary – Sparrow Hawk's Digital Nest" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.5);" />
+  <img src="images/The-Circuit-Spire.webp" alt="Frozen Sanctuary – Sparrow Hawk's Digital Nest" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.5);" />
 </p>
 
 <p align="center">
@@ -20,10 +20,10 @@ This project is a fully-responsive, immersive web experience that serves as a ce
 
 ## 🌟 Live Demo
 
-- **Main Sanctuary**: [https://github.com/reyrove/frozen-sanctuary](https://github.com/reyrove/frozen-sanctuary)
+- **Main Sanctuary**: [https://reyrove.github.io/Frozen-Sanctuary/](https://reyrove.github.io/Frozen-Sanctuary/)
 - **Chat with Sparrow Hawk**: [sparrow-hawk-textile-narrator.vercel.app](https://sparrow-hawk-textile-narrator.vercel.app/)
 - **CodeArt Generator**: [sparrow-hawk-code-art-generator.vercel.app](https://sparrow-hawk-code-art-generator.vercel.app/)
-- **Podcast**: [Spotify](https://open.spotify.com/show/39e2jWUSOKqmc6gQSQBeWb?si=hhzLIWaqROKe24r4kGNknA)
+- **Podcast**: [Spotify](https://open.spotify.com/show/547kj2u0v3nWNMPdrPnQ6c)
 
 ---
 
@@ -41,6 +41,7 @@ This project is a fully-responsive, immersive web experience that serves as a ce
 - **Podcast Integration:** Direct access to the Frozen Sanctuary podcast on Spotify.
 - **Responsive Design:** Optimized for all screen sizes from mobile to 4K desktops. On mobile, the About page's side images collapse into a horizontal strip above the text, and the gallery grid reflows beautifully.
 - **Immersive Design:** A unique "Frost & Fire" color scheme — a frozen rainbow where even the reds are icy blue — with a subtle grain texture overlay for a tactile, analog feel. Cormorant Garamond serif for the voice, Inter for the body, Space Mono for the gallery UI.
+- **SEO Optimized:** Fully equipped with Schema.org JSON-LD (Person, WebSite, CollectionPage, Breadcrumbs), Open Graph tags, Twitter Cards, and XML sitemaps.
 
 ---
 
@@ -49,35 +50,31 @@ This project is a fully-responsive, immersive web experience that serves as a ce
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript
 - **Design:** Custom CSS, CSS Variables for theming, CSS Grid & Flexbox, CSS Animations, `backdrop-filter` frosted glass
 - **Fonts:** Google Fonts (Cormorant Garamond, Inter, Space Mono)
-- **Icons:** Font Awesome 6.4.0
+- **Icons:** Font Awesome 6.4.0 (loaded asynchronously for performance)
 - **Deployment:** GitHub Pages / Vercel
 
 ---
 
 ## 🗂️ Project Structure
 
-```
+```text
 .
-├── index.html                  # Main landing page (The Frozen Sanctuary)
-├── style.css                   # Styles for the main page
 ├── about/
-│   ├── about.html              # About Sparrow Hawk page
-│   └── about.css               # Styles for the about page
+│   ├── about.css               # Styles for the about page
+│   └── about.html              # About Sparrow Hawk page
 ├── gallery/
-│   ├── gallery.html            # The Frozen Sanctuary Album gallery page
-│   ├── gallery.css             # Styles for the gallery page
 │   ├── gallery-data.js         # JavaScript array containing all gallery data
-│   └── gallery.js              # JavaScript logic for the gallery (rendering, filtering, modal)
-├── logo-license/
-│   └── logo.html               # Logo license page (linked from header)
-├── images/
-│   ├── logo.svg                # Website logo
-│   ├── The Circuit Spire.webp  # Main hero image
-│   ├── Frostfire-Stare.jpg     # Left image on about page
-│   ├── Frostfire.webp          # Right image on about page
-│   └── [gallery images]        # .webp / .jpg files referenced in gallery-data.js
+│   ├── gallery.css             # Styles for the gallery page
+│   ├── gallery.html            # The Frozen Sanctuary Album gallery page
+│   └── gallery.js              # JavaScript logic for rendering & modals
+├── images/                     # All visual assets (WebP, JPGs, SVGs)
+├── index.html                  # Main landing page (The Frozen Sanctuary)
+├── LICENSE                     # Custom License (Code is MIT, Art is protected)
 ├── README.md                   # This file
-└── [other files]
+├── robots.txt                  # SEO crawler instructions
+├── site.webmanifest            # PWA / Mobile app manifest
+├── sitemap.xml                 # SEO sitemap
+└── style.css                   # Styles for the main index page
 ```
 
 ---
@@ -130,7 +127,7 @@ To run this website locally:
 To add a **new filter category**, add a button to `gallery.html`:
 
 ```html
-<button class="filter-btn" data-filter="YourTag">Your Tag</button>
+<button class="filter-btn" data-filter="YourTag" aria-pressed="false">Your Tag</button>
 ```
 
 ### Modifying the Color Theme
@@ -167,7 +164,7 @@ Change these and the entire site recolors itself — header underlines, buttons,
 2.  Click on **Settings** > **Pages**.
 3.  Under "Branch," select `main` and the `/ (root)` folder.
 4.  Click **Save**.
-5.  Your site will be published at `https://reyrove.github.io/frozen-sanctuary/`
+5.  Your site will be published at `https://reyrove.github.io/Frozen-Sanctuary/`
 
 ### Deploy to Vercel (Recommended)
 
@@ -194,9 +191,11 @@ We welcome contributions that enhance the Frozen Sanctuary experience. Please fo
 
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This project uses a **Custom License**. 
+- The **source code** (HTML/CSS/JS) is open-source under the MIT License.
+- The **artwork, written stories, and branding** are strictly protected and may not be reproduced or used in AI training without permission.
 
-Artwork and written stories © Sparrow Hawk · Frozen Sanctuary.
+See the `LICENSE` file for full details.
 
 ---
 

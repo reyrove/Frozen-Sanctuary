@@ -1,5 +1,5 @@
 // ============================================================
-// GALLERY · Hawk Family Album
+// GALLERY · Frozen Sanctuary Album
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentArtworks = [];
     let currentFilter = 'all';
+    let lastFocusedElement = null;
 
     // --- Render Function ---
     function renderGallery(artworks) {
@@ -28,15 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         rack.innerHTML = artworks.map((art, index) => {
             const tags = art.tags || [];
-            // Store tags lowercased so filtering is case-insensitive
             const filterAttr = tags.map(t => t.toLowerCase()).join(' ');
+            const altText = `${art.title || 'Frozen Sanctuary piece'} — generative artwork by ${tags.slice(0, 2).join(' & ') || 'Sparrow Hawk'}`;
 
             return `
                 <div class="tailor-card" data-filter="${filterAttr}" data-index="${index}">
-                    <img class="card-img" src="${art.image || 'https://placecats.com/400/400?random=' + index}" alt="${art.title || 'Memory'}" loading="lazy" />
+                    <img class="card-img"
+                         src="${art.image}"
+                         alt="${altText}"
+                         width="400" height="400"
+                         loading="lazy" decoding="async" />
                     <div class="card-info">
                         <span class="card-title">${art.title || 'Untitled'}</span>
-                        <div class="collection-badge">${art.collection || 'Family Album'}</div>
+                        <div class="collection-badge">${art.collection || 'Frostfire Stare'}</div>
                         <div class="button-group">
                             <button class="card-btn btn-fabric" data-index="${index}">View</button>
                             ${art.mintUrl ? `<a href="${art.mintUrl}" target="_blank" rel="noopener noreferrer" class="card-btn btn-mint">Mint</a>` : ''}
@@ -60,10 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const art = currentArtworks[index];
         if (!art) return;
 
-        modalImg.src = art.image || 'https://placecats.com/600/400?random=' + index;
-        modalImg.alt = art.title || 'Memory';
+        lastFocusedElement = document.activeElement;
+
+        modalImg.src = art.image;
+        modalImg.alt = `${art.title || 'Frozen Sanctuary piece'} — full view`;
         modalTitle.textContent = art.title || 'Untitled';
-        modalStory.textContent = art.story || art.description || 'A moment in the Hawk Family Album.';
+        modalStory.textContent = art.story || art.description || 'A moment in the Frozen Sanctuary Album.';
 
         // Tags
         modalTags.innerHTML = '';
@@ -79,13 +86,19 @@ document.addEventListener('DOMContentLoaded', () => {
         modalMeta.textContent = art.collection ? `Collection: ${art.collection}` : '';
 
         modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+
+        // Move focus to close button for accessibility
+        if (modalClose) modalClose.focus();
     }
 
     // --- Close Modal ---
     function closeModal() {
         modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        if (lastFocusedElement) lastFocusedElement.focus();
     }
 
     // --- Filter ---
@@ -93,12 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
         currentFilter = filter;
         const cards = document.querySelectorAll('.tailor-card');
 
-        // Normalize the incoming filter to lowercase to match data-filter
         const filterLower = (filter || '').toLowerCase().trim();
 
         cards.forEach(card => {
             const filterAttr = (card.dataset.filter || '').toLowerCase();
-
             if (filterLower === 'all' || filterAttr.includes(filterLower)) {
                 card.style.display = '';
             } else {
@@ -106,9 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update active button
+        // Update active button + aria-pressed
         document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.filter === filter);
+            const isActive = btn.dataset.filter === filter;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
         });
     }
 
@@ -138,18 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fallback data
             currentArtworks = [
                 {
-                    title: 'Papa Hawk',
-                    image: 'https://placecats.com/400/400?random=1',
-                    story: 'The one who started it all. Papa Hawk in his element.',
-                    tags: ['Papa Hawk', 'Family'],
-                    collection: 'Family Album'
-                },
-                {
-                    title: 'Baby Hawk',
-                    image: 'https://placecats.com/400/400?random=2',
-                    story: 'A wandering light between code and imagination.',
-                    tags: ['Baby Hawk', 'AI Lounge'],
-                    collection: 'Family Album'
+                    title: 'Frostfire',
+                    image: '../images/Frostfire-Stare.jpg',
+                    story: 'The embodiment of an eternal bond between human and artificial intelligence.',
+                    tags: ['Sparrow Hawk', 'Frostfire'],
+                    collection: 'Frostfire Stare'
                 }
             ];
         }
@@ -157,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderGallery(currentArtworks);
 
         // --- Event Listeners ---
-        // Filter buttons
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 filterGallery(btn.dataset.filter);
@@ -174,7 +179,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
+            if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+        });
+
+        // Trap focus inside modal (basic)
+        modal.addEventListener('keydown', (e) => {
+            if (e.key !== 'Tab' || !modal.classList.contains('open')) return;
+            const focusables = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            if (!focusables.length) return;
+            const first = focusables[0];
+            const last = focusables[focusables.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
         });
 
         // Back to top

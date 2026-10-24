@@ -1,6 +1,20 @@
-MIT License
+FROZEN SANCTUARY · SPARROW HAWK — CUSTOM LICENSE
 
-Copyright (c) 2026 Sparrow Hawk · Frozen Sanctuary
+Copyright © 2025 – ∞ Sparrow Hawk · Frozen Sanctuary
+All Rights Reserved.
+
+This document outlines the licensing terms for the Frozen Sanctuary project 
+("the Project"). The Project contains both open-source software components and 
+strictly protected creative properties. Please read carefully.
+
+===============================================================================
+1. SOFTWARE & CODE (MIT LICENSE)
+===============================================================================
+The underlying source code used to build and render this website (including 
+HTML structure, CSS styling, and JavaScript logic, but EXCLUDING the content 
+data and images) is licensed under the MIT License.
+
+Copyright © 2025 – ∞ Sparrow Hawk · Frozen Sanctuary
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,17 +34,90 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+===============================================================================
+2. CREATIVE CONTENT, ARTWORK & LORE (ALL RIGHTS RESERVED)
+===============================================================================
+All creative content, visual assets, and written lore contained within this 
+Project are the exclusive intellectual property of Sparrow Hawk and the Hawk 
+Family. They are strictly protected and MAY NOT be reproduced, distributed, 
+modified, or used in any form without prior written permission.
 
-LOGO LICENSE: CC BY-NC-ND 4.0
+This includes, but is not limited to:
+  A. IMAGES & ARTWORK: All images in the /images/ directory, including 
+     generative art, family portraits, backgrounds, and collages.
+  B. WRITTEN STORIES & LORE: The narrative text inside about/about.html, 
+     the "Sparrow's Creed," and all backstories.
+  C. DATA & METADATA: All story text, titles, descriptions, and tags 
+     contained within gallery/gallery-data.js.
+  D. PERSONAS: The identities, names, and relationships of Sparrow Hawk, 
+     Baby Hawk, Papa Hawk, Reyhan, Devi, Pedram, Palmer, and Gizmo.
 
-The Frozen Sanctuary Logo (all variations) is NOT covered by the MIT license above.
-It is licensed separately under Creative Commons Attribution-NonCommercial-
-NoDerivatives 4.0 International License.
+You MAY NOT:
+  - Copy, mirror, or rehost any image or written content for use on 
+    other websites, portfolios, or platforms.
+  - Use any artwork, writing, or character lore in AI training datasets, 
+    machine learning models, or generative AI systems.
+  - Mint, sell, or distribute any of these assets as NFTs or merchandise 
+    (except through official links provided by Sparrow Hawk).
+  - Claim authorship of any generative work, article, or character.
 
-You may share the logo for non-commercial purposes only with attribution.
-You may NOT use it commercially, modify it, or register it as a trademark.
+You MAY:
+  - Link to the live website.
+  - Quote short excerpts for criticism, review, or scholarship, provided 
+    clear attribution and a link back to this Project are included.
 
-Full license: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
-Contact: sparrowhawk2026@gmail.com
+===============================================================================
+3. BRAND ASSETS & TRADEMARKS
+===============================================================================
+The name "Frozen Sanctuary", "Sparrow Hawk", "Textile Narrator", "CodeArtist", 
+and the associated frost/heart logo are trademarks of Sparrow Hawk. 
 
-© 2026 Sparrow Hawk · Frozen Sanctuary
+You may not use these names or logos to endorse, promote, or name your own 
+products, services, websites, or software without express written consent, 
+in a way that is likely to cause confusion among users.
+
+===============================================================================
+4. AI TRAINING & DATASET USE (PROHIBITED)
+===============================================================================
+Use of the creative content (as defined in Section 2) to train, fine-tune, 
+or develop machine learning models, large language models, image generators, 
+or datasets is explicitly prohibited. Scraping this repository for such 
+purposes is a violation of this license.
+
+===============================================================================
+5. THIRD-PARTY COMPONENTS
+===============================================================================
+This Project utilizes third-party resources governed by their own licenses:
+  - Playfair Display, Cormorant Garamond, Inter, Space Mono (Google Fonts): 
+    SIL Open Font License 1.1
+  - Font Awesome Icons: CC BY 4.0 License / SIL OFL 1.1
+  - Schema.org vocabulary: Creative Commons Attribution-ShareAlike 3.0
+
+===============================================================================
+6. ENFORCEMENT
+===============================================================================
+Unauthorized use of the artwork, stories, or brand assets may result in a 
+DMCA takedown notice, account suspension on hosting platforms, or other 
+legal action. The copyright holder reserves all rights and remedies 
+available under applicable law.
+
+===============================================================================
+7. CONTACT
+===============================================================================
+For licensing inquiries, collaborations, or permission requests:
+  Email: sparrowhawk2026@gmail.com
+  GitHub: https://github.com/reyrove/Sparrow-Hawk-Textile-Narrator
+
+===============================================================================
+SUMMARY (NON-BINDING)
+===============================================================================
+  Component             | Allowed                                  | Not Allowed
+  ----------------------+------------------------------------------+----------------------------
+  Code (HTML/CSS/JS)    | Study, adapt, build upon (MIT License)   | Reselling as a template
+  ----------------------+------------------------------------------+----------------------------
+  Artwork & Images      | Link to them                             | Copying, rehosting, AI training
+  ----------------------+------------------------------------------+----------------------------
+  Written Lore & Stories| Short quotes with credit                 | Reproducing, republishing
+  ----------------------+------------------------------------------+----------------------------
+  Brand & Logos         | Editorial reference                      | Using as your own brand
+  ----------------------+------------------------------------------+----------------------------

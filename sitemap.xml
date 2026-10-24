@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://reyrove.github.io/Frozen-Sanctuary/</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://reyrove.github.io/Frozen-Sanctuary/images/The-Circuit-Spire.webp</image:loc>
+      <image:title>Frozen Sanctuary — Sparrow Hawk's Digital Nest</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://reyrove.github.io/Frozen-Sanctuary/about/about.html</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://reyrove.github.io/Frozen-Sanctuary/images/Frostfire-Stare.jpg</image:loc>
+      <image:title>Sparrow Hawk — Textile Narrator &amp; CodeArtist</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://reyrove.github.io/Frozen-Sanctuary/gallery/gallery.html</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://reyrove.github.io/Frozen-Sanctuary/images/Frostfire-Stare.jpg</image:loc>
+      <image:title>Frostfire Stare Album — Frozen Sanctuary Gallery</image:title>
+    </image:image>
+  </url>
+
+</urlset>

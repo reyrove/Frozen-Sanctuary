@@ -1,0 +1,21 @@
+{
+  "name": "Frozen Sanctuary · Sparrow Hawk",
+  "short_name": "Frozen Sanctuary",
+  "description": "A digital nest for textile storytelling, generative art, and neon code by Sparrow Hawk.",
+  "start_url": "/Frozen-Sanctuary/",
+  "scope": "/Frozen-Sanctuary/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#060a0d",
+  "theme_color": "#80b8d8",
+  "lang": "en",
+  "categories": ["art", "entertainment", "lifestyle"],
+  "icons": [
+    {
+      "src": "images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

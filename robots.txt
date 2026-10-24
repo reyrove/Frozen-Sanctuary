@@ -1,0 +1,18 @@
+# robots.txt — Frozen Sanctuary (Sparrow Hawk)
+# https://reyrove.github.io/Frozen-Sanctuary/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://reyrove.github.io/Frozen-Sanctuary/sitemap.xml
